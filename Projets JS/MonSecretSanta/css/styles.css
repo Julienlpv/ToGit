@@ -1,0 +1,193 @@
+/*
+Définir des variables CSS
+https://developer.mozilla.org/fr/docs/Web/CSS/Using_CSS_custom_properties
+
+Première variable CSS : currentColor
+https://la-cascade.io/la-premiere-variable-css-currentcolor/
+*/
+
+:root {
+    --color-default : #222;
+    --color-inverse : #ddd;
+    --dark-color    : #444;
+    --light-color   : #fff;
+  }
+  
+/* *********** Styles de base ********** */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height : 100vh;
+  display : grid;
+  grid-template-rows: auto 1fr auto;
+  font-size: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color : var(--color-default,#222);
+}
+
+img,
+video {
+  max-width: 100%;
+  height : auto;
+  vertical-align: top;
+}
+
+/* *********** Layout général ********** */
+
+.banner,
+.footer,
+main {
+  padding-left  : 1em;
+  padding-right : 1em;
+}
+
+main {
+  padding-bottom : 5em;
+}
+
+.banner,
+.footer {
+  background-color: var(--dark-color);
+  color : var(--color-inverse);
+}
+
+.banner a,
+.footer a {
+  color : var(--color-inverse);
+  text-decoration: none;
+}
+
+.banner {
+  padding-top : 1rem;
+  padding-bottom : 1rem;
+  text-align: center;
+}
+
+.site-logo {
+  grid-column: 1;
+  grid-row: 1;
+  font-size : 1.3em;
+}
+
+.site-description {
+  grid-column: 1;
+  grid-row: 2;
+  margin : 0;
+}
+
+.banner-nav a {
+  display: block;
+  margin : 1em;
+  padding-bottom: 5px;
+  border-bottom: 1px dotted currentColor;
+  text-align: left;
+}
+
+.banner-nav a:hover,
+.banner-nav a:focus,
+.banner-nav a:active,
+.banner-nav a.is-current {
+  color : var(--light-color);
+}
+
+
+.footer {
+  position: relative;
+  padding-top : 1rem;
+  padding-bottom : 1rem;
+  text-align: center;
+}
+
+.footer > * {
+  margin : 0;
+}
+
+#goTop {
+  width : 1.5em;
+  height : 1.2em;
+  line-height: 1.2em;
+  position : absolute;
+  top : -1.2em;
+  left : calc(50% - 0.75em);
+  z-index : 2000;
+  background-color: var(--dark-color);
+  border-radius: 5px 5px 0 0;
+  font-size: 2em;
+}
+
+@media screen and (min-width : 900px) {
+  .banner,
+  .footer,
+  main {
+    padding-left  : calc((100% - 1200px) / 2 );
+    padding-right : calc((100% - 1200px) / 2 );
+  }
+
+  .banner {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+    column-gap : 1em;
+    text-align: left;
+  }
+
+  .banner-nav {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    justify-self : end;
+    text-transform: uppercase;
+  }
+
+  .banner-nav a {
+    display: inline-block;
+    border-bottom: 5px solid transparent;
+  }
+
+  .banner-nav a:hover,
+  .banner-nav a:focus,
+  .banner-nav a:active,
+  .banner-nav a.is-current {
+    border-bottom: 5px solid currentColor;
+    color : var(--light-color);
+  }
+}
+  /* *********** Styles du TP ********** */
+  
+body {
+  background : url(../img/christmas-g59ea0820e_1920.jpg) no-repeat fixed center;
+  background-size: cover;
+}
+
+main {
+  min-width: 40em;
+  justify-self: center;
+  align-self: center;
+  font-size : 1.4em;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  color : white;
+  text-shadow: black 0.1em 0.1em 0.2em;
+  text-align: center;
+}
+
+ul {
+  margin : 0;
+  list-style: none;
+}
+
+li {
+  padding : 1rem;
+  border-bottom: 1px dotted #333;
+}
+

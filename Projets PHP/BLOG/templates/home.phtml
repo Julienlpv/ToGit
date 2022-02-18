@@ -1,0 +1,29 @@
+
+
+
+<section>
+<h1>Nos dernières publications</h1>
+
+<?php foreach ($articles as $article): ?>
+
+    <article> 
+        <h3> <?=$article['label']?></h3>
+        <img src="<?=$article['image']?>" alt=""> 
+        <h2><?=$article['title']?></h2>
+        <small><?=(new DateTimeImmutable($article['createdAT']))->format('d/m/Y');?></small>
+        <p><?=mb_substr($article['content'], 0, 150);?>...<a href="index.php?action=article&idArticle=<?php echo $article['idArticle']?>">en savoir plus..</a></p>
+
+
+    </article>
+        
+       
+      
+                               
+
+        
+
+    
+     
+<?php endforeach; ?> 
+
+</section>

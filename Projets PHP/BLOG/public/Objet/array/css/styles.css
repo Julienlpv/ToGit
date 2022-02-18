@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap');
+
+h1 {font-size: 40px;
+    font-family: Times, serif, cursive;}
+
+header {
+    
+    font-size: 20px;
+    color:burlywood;
+    display: flex;
+    flex-direction: column;
+    background: black;
+    height: 250px;
+    margin-top: 0px;}
+
+header a {color: cadetblue;
+          font-family: 'Comforter Brush';
+          font-size: 30px;}
+   
+
+main { 
+    max-width: 1200px;
+    text-align: center;
+    margin-top: 100px;
+    margin-left: 300px;
+}
+
+body {
+    background-image: url(https://www.voyages-interieurs.com/wp-content/uploads/2019/03/maroc-dune-voyages-interieurs.jpg);
+    background-size: cover;
+}
+
+main { font-size: 50px;
+         text-align: center;
+         color: white;
+         text-shadow: black 2px;
+         text-indent: 2px;
+        
+
+}

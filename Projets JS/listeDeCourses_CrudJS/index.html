@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Webstorage</title>
+    <meta name="description" content="Modifier un produit">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./css/normalize.css" rel="stylesheet">
+    <link href="./css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class="banner">
+      <a class="site-logo" href="../">Liste de courses</a>
+      <p class="site-description">Étape 4 : Modifier un produit</p>
+      <nav class="banner-nav">
+        <a href="../step1/">Etape 1</a>
+        <a href="../step2/">Etape 2</a>
+        <a href="../step3/">Etape 3</a>
+        <a class="is-current" href="../step4/">Etape 4</a>
+      </nav>
+    </header>
+    <main role="form">
+      <form class="form">
+        <fieldset>
+          <legend>Saisir un produit</legend>
+          <p class="field-group">
+            <label for="product">Produit</label>
+            <input type="text" id="product" name="product">
+          </p>
+          <p class="field-group">
+            <label for="quantity">Quantité</label>
+            <input type="number" id="quantity" name="quantity" value="1" step="any">
+          </p>
+          <fieldset class="group-field">
+            <legend>Conditionnement</legend>
+            <label for="unit">
+              <input type="radio" id="unit" name="packaging" value="unit" checked>
+              Unité
+            </label>
+            <label for="kg">
+              <input type="radio" id="kg" name="packaging" value="kg">
+              Kg
+            </label>
+            <label for="box">
+              <input type="radio" id="box" name="packaging" value="box">
+              Boite ou sachet
+            </label>
+          </fieldset>
+        </fieldset>
+        <!-- - Le formulaire étant traité en javaScript, le bouton de soumission de doit pas être de type="submit" sinon, le formulaire est posté -->
+        <p class="buttons">
+          <button type="button" id="add-product">Ajouter un produit</button>
+          <!-- Permet d'effacer le saisie du formulaire AVANT la soumission -->
+          <button type="reset"  id="reset-product">Annuler la saisie</button>
+        </p>
+      </form>
+      <section class="list-container">
+        <h2>Liste de courses</h2>
+
+        <div id="list"></div>
+        
+        <button type="button" id="clear-list">Vider la liste</button>
+      </section>
+
+    </main>
+    <footer class="footer">
+      
+      <p>Je remercie les auteurs des photos présentées sur ce site, récoltées sur <a href="https://pixabay.com/fr/">Pixabay</a></p>
+      <a id="goTop" href="#" title="Remonter">&UpArrow;</a>
+    </footer>
+    <script src="js/webstorage.js"></script>
+  </body>
+</html>

@@ -1,0 +1,125 @@
+
+
+body {
+    margin: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+
+
+.banner{
+    background-color: black;
+    
+    
+    &-nav{
+        margin-left: 10px;
+        
+        
+        
+
+        a {   
+            
+            
+            text-decoration: none;
+            margin-top: 2px;
+            &:link, &:visited{     // & permet de coller le a:visited alors que sans , le code aurait écrit a : visited et n'aurait pas marché
+                color: white;
+            }
+            &:hover{
+                color: white;
+                text-decoration: underline;
+            }
+                
+            &.title {
+                color: rgb(247, 247, 247);
+                margin-top: 10px;
+                font-size: 1.5em;
+            }    
+        }
+        
+        
+
+        .is-current {
+            display:flex;
+            justify-content: space-around;
+            font-size: 20px;      
+            align-items: flex-start;
+            margin-left: 60%;
+
+        }   
+    }
+}
+
+
+
+.slider {
+    padding-top: 30px;
+
+    .slider-figure { 
+        display: none;  
+        margin-left: 25%;
+        margin-right: 25%;
+        .slider-legend {
+
+            background-color: black;
+            color: white;
+            padding: 8px;
+            font-weight: bold;
+            font-size: 30px;
+        }
+        img {           
+            width: 100%;
+
+        }
+        &.is-active {
+            display: block;
+        }
+    }
+
+    
+        
+    .slider-nav {
+        display: flex;
+        justify-content:space-around;
+        padding-bottom: 30px;
+        
+        & a {
+            &:link, &:visited{     
+                color: rgb(170, 112, 4);
+                text-decoration: none;
+            }
+            &:hover{
+                color: black;
+                text-decoration: underline;
+            }
+        }
+    }
+    
+            
+            
+        
+    
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    a {
+        &:link, &:visited{     
+            color: white;
+            text-decoration: none;
+        }
+        &:hover{
+            color: white;
+            text-decoration: underline;
+        }
+    }
+}
+
+

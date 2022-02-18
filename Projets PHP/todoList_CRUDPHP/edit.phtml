@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>PHP</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  
+</head>
+<body>
+	<main>
+  
+
+        
+ 
+        
+
+
+
+        <h1>Modification d'une tâche</h1>
+<!-- Formulaire d'ajout --> 
+<form action="edit.php?indexToEdit=<?php echo $indexToEdit ?> " method="POST">
+
+<fieldset>
+<label for="title" id="title" name="title">Titre</label>
+<input type="text" id="title" name="title" value="<?=$title?>">
+<?php if (isset($errors['title'])): ?>
+                            <p><?=$errors['title'];?></p>
+                        <?php endif; ?>
+<label for="description" id="description" name="description">Description</label>
+<textarea id="description" name="description" placeholder="entrez la decription de votre tâche"><?php echo $description ?></textarea>
+
+<label for="start">Date:</label>
+<input type="date" id="date" name="date"
+       value="<?php echo date('Y-m-d')?>"
+       min="<?php echo date('Y-m-d')?>" max="2025-12-31">
+
+<p>Priorité</p>
+  <input type="radio" id="basse" name="priority" value="basse" <?php echo $priority=='basse'?'checked':''?>>
+  <label for="basse">Basse</label>
+
+
+
+  <input type="radio" id="normale" name="priority" value="normale" <?php echo $priority=='normale'?'checked':''?>>
+  <label for="normale">Normale</label>
+
+
+
+  <input type="radio" id="haute" name="priority" value="haute" <?php echo $priority=='haute'?'checked':''?>>
+  <label for="haute">Haute</label>
+
+
+  <button type="submit" value="Envoyer le formulaire">Enregistrer les modifications</button>
+</fieldset>
+</form>
+
+</main>
+
+    
+</body>
+</html>

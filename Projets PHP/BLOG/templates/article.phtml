@@ -1,0 +1,53 @@
+Contenu de la page ARTICLE
+
+<article> 
+        <h3> <?=$article['label']?></h3>
+        <img src="<?=$article['image']?>" alt=""> 
+        <h2><?=$article['title']?></h2>
+        <small><?=(new DateTimeImmutable($article['createdAT']))->format('d/m/Y');?></small>
+        <p><?=$article['content'];?></p>
+</article>
+
+    <form action="index.php?action=article&idArticle=<?=$article['idArticle'];?>" method="POST">
+            
+        <fieldset>
+            <legend>Commentez cet article</legend>
+            <div>
+                <label for="comment">Commentaire</label>
+                <?php if (isset($errors['content'])): ?>
+                    <p class="error"><?=htmlspecialchars($errors['content'])?></p>
+                <?php endif; ?>
+                <textarea name="comment" id="comment"></textarea>
+            </div>    
+            <div>
+                <label for="rate">Note</label>
+                <select name="rate" id="rate">
+                    <?php for ($i=1; $i <=5; $i++):?>
+                        <option value="<?=$i?>"><?=$i?></option>
+                    <?php endfor; ?>
+                </select>
+            </div>
+            <input type="submit" value="Valider">
+        </fieldset>
+
+    </form>   
+        <h2>Derniers commentaires</h2>
+        <?php if ($showComments):?>
+            <ul>
+            <?php foreach ($showComments as $showComment):?>
+                <li>
+                    <p><?=htmlspecialchars($showComment['content'])?></p>
+                    <p><?=htmlspecialchars($showComment['rate'])?></p>
+                    <p><?=htmlspecialchars($showComment['createdAt'])?></p>
+                </li>
+            <?php endforeach;?>
+            </ul>
+        <?php else:?>
+            <p>Soyez le premier à commenter cet article!</p>
+        <?php endif; ?>
+        
+            
+
+    
+
+    

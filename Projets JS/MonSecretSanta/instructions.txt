@@ -1,0 +1,21 @@
+Saisir un nom d'une personne du groupe:
+- Julien
+- Gabin
+- Marianne
+- Sélène
+- Mohammed
+- Kamel
+- Véronique
+- Vincent
+- Aurélien
+- Alice 
+
+Si le nom choisi ne correspond pas à une personne du groupe, 
+on redemande un nom, 3 itérations. 
+
+
+Une fois que le nom d'une personne du groupe a été saisi, déclenchement du tirage
+au sort sachant qu'une personne ne peut se faire de cadeau à elle-même. 
+
+
+Merci pour la lecture!

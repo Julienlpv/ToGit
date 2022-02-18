@@ -1,0 +1,11 @@
+* {
+    color: white; 
+}
+    
+
+body {
+    background: url(../img/photoNoelSanta.jpeg) no-repeat;
+    background-size: cover;
+}
+
+/*Comment intégrer du CSS à un texte généré par JS?*/ 
