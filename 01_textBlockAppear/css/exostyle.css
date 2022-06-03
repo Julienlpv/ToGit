@@ -1,0 +1,74 @@
+body {
+  background-color: #09475f;
+  margin: 0;
+  padding: 0;
+}
+
+.Box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1200px;
+  min-height: 500px;
+  position: relative;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-transition: .5s ease-in;
+  transition: .5s ease-in;
+}
+
+.Box-card {
+  max-width: 300px;
+  max-height: 220px;
+  margin-left: 20px;
+  background-color: wheat;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: .3s .5s;
+  transition: .3s .5s;
+}
+
+.Box-card:hover {
+  max-height: 800px;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.Box-card:hover .Box-card-content {
+  -webkit-transform: translateY(-45px);
+          transform: translateY(-45px);
+  opacity: 1;
+  -webkit-transition: .8s ease-in-out;
+  transition: .8s ease-in-out;
+}
+
+.Box-card-content {
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+  opacity: 0;
+  -webkit-transition: .8s ease-in-out;
+  transition: .8s ease-in-out;
+}
+
+.Box-card-figure {
+  -webkit-transform: translateY(-40px);
+          transform: translateY(-40px);
+  width: 80%;
+  margin: 0 auto;
+}
+
+.Box-card-figure-img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+/*# sourceMappingURL=exostyle.css.map */

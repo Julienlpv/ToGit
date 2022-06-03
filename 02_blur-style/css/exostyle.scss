@@ -1,0 +1,72 @@
+body {
+    background: linear-gradient(45deg, #ffaf00, #bb02ff) no-repeat;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.CardContainer {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    position:relative;
+    justify-content: center;
+    
+    
+
+    &-card {
+        position: relative;
+        background-color: white;    
+        margin-left: 30px;   
+        min-height: 400px;
+        width: 50%;
+        border-radius: 50px;
+        justify-content: center;
+        overflow: hidden;
+        
+        .Card1 {
+            background-color: #ffaf00;
+            .CardContainer-card-circle {
+                background-color: #bb02ff;
+            }
+        }
+
+
+        .card2 {
+            .CardContainer-card-circle {
+                background-color: black;
+            }
+        }
+        
+        &-circle {
+            margin: 0;
+            padding: 0;
+            position: relative;
+            display: flex;
+            min-height: 100px;
+            min-width: 100%;
+            align-items: center;
+            justify-content: center;
+            top: -20px;
+            background-color: #ffaf00;
+            
+            
+            }
+            &-h2 {
+                margin: 0;
+                font-size: 4.5em;
+                font-weight: 600;
+                color: white;
+                ;
+            }
+        
+    
+    }
+
+    
+
+
+
+}

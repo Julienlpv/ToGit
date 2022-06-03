@@ -1,0 +1,125 @@
+@charset "UTF-8";
+²è²body {
+  background-color: silver;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+.Wrapper-card {
+  width: 250px;
+  height: 250px;
+  background-color: white;
+  -webkit-box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.725);
+          box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.725);
+  position: relative;
+  padding: 1em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.Wrapper-card.card1 {
+  overflow: hidden;
+}
+
+.Wrapper-card.card1::before {
+  content: "";
+  background-color: blue;
+  opacity: 0.7;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  pointer-events: none;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.Wrapper-card.card1:hover {
+  -webkit-transition: .5s;
+  transition: .5s;
+  background-color: white;
+}
+
+.Wrapper-card.card1:hover::before {
+  content: "";
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.Wrapper-card.card1 .Wrapper-card-imgBox {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  margin: 0;
+  right: -10px;
+  bottom: -10px;
+  overflow: hidden;
+  z-index: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.Wrapper-card.card1 .Wrapper-card-imgBox:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.Wrapper-card.card1 .Wrapper-card-imgBox-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.Wrapper-card.card1 .Wrapper-card-content {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+  color: white;
+  text-shadow: 4px 4px 10px black;
+}
+
+.Wrapper-card.card2 {
+  background-color: dodgerblue;
+  overflow: hidden;
+}
+
+.Wrapper-card.card2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.Wrapper-card.card2:hover::before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  background-color: white;
+}
+
+.Wrapper-card.card2 .Wrapper-card-content {
+  position: relative;
+  z-index: 2;
+}
+/*# sourceMappingURL=pseudo-element.css.map */

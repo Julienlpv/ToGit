@@ -1,0 +1,55 @@
+/**
+* WORDPRESS Theme v2.1.0
+* Copyright 2022 Véronique CUOMO
+* Web developer training
+* 
+* Mixins
+*/
+
+// Media queries
+@mixin breakpoint-up($breakpoint) {
+  @media only screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($breakpoint) {
+  $breakpoint-down : $breakpoint - 1px;
+  @media only screen and (max-width: $breakpoint-down) {
+    @content;
+  }
+}
+
+@mixin breakpoint-between($min,$max) {
+  $breakpoint-down : $max - 1px;
+  @media only screen and (min-width: $min) and (max-width: $breakpoint-down) {
+    @content;
+  }
+}
+
+// SURVOL 
+@mixin hover() {
+  &:hover { @content; }
+}
+
+@mixin hover-focus() {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+
+@mixin hover-focus-active() {
+  &:hover,
+  &:focus,
+  &:active {
+    @content;
+  }
+}
+
+
+
+// Retourne Valeur RGB d'une couleur
+@function hexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}

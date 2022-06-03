@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'PT Sans', sans-serif;
+}
+
+li {    
+    list-style: none;
+    text-decoration: none;
+}
+
+.Header {
+    margin-bottom: 50px;
+    &-logoBox {
+        position: relative;
+        width: 150px;
+        height: 200px;
+        text-align: center;
+        margin-left:auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+        &-img {
+            width: 100%;    
+        }
+        &-name {
+            color: #5A9FF6;
+            font-size: 30px;
+        }
+    }
+    &-menu {
+        background-color:#5A9FF6; 
+        display: flex;
+        flex-direction: column;
+        
+        
+        &-link {
+            width: 100%;
+            padding: 20px 0px;
+            text-decoration: none;
+            text-align: center;
+            &:link, &:visited {
+            color: white;
+            }
+            &:hover {
+                background-color:#80b7fada
+            }
+        }
+        .UserMenu {
+            
+            &-userBox {
+                
+                width: 60px;
+                height: 60px;
+                
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                z-index: 6;
+
+                &-img {
+                   width: 100%; 
+                   border-radius: 80px;
+                   box-shadow: 2px 2px 2px rgba(47, 46, 46, 0.655);
+                   
+                }
+            }
+            &-wrap {
+                display:none;
+                width: 100%;
+                min-height: 100vh;
+                position: fixed;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                background-color: rgba(255, 255, 255, 0.9);
+                z-index: 5;
+                
+                
+                
+            }
+            &-nav {
+                margin: 2em;
+                margin-top: 60px;  
+                &-item{
+                    
+                    &-link {
+                        font-size: 1.3em;
+                        text-decoration: none;
+                        img {
+                            max-width: 30px;
+                            margin-top: 30px;
+                            margin-right: 20px;
+                        }
+                        
+                        &:link, &:visited {
+                            color: black;
+                        }
+                    }
+                    
+                }
+            }
+            
+        }
+    }
+}
+
+main {
+    margin-left: 30px ;
+    margin-right: 30px;
+}
+
+
+.active {
+    .UserMenu-wrap {
+        display: block;
+        text-decoration: none;
+    }
+}
+
+
+
+
+@media screen AND (min-width:500px){
+    .Header {
+        &-logoBox {
+            margin-top: 25px;
+            margin-left: 70px;
+        }
+        &-menu {
+            position: relative;
+            flex-direction: row;
+            &-link {
+                padding-left: 5px;
+
+            }    
+            .UserMenu {
+                &-userBox-img{
+                    
+                }
+                &-wrap {
+                    position: sticky;
+                    display: none;
+                    min-width: 300px ;
+                }
+            }
+            
+            
+        
+        }
+    }
+
+    .active {
+        .UserMenu-wrap {
+            display: flex;
+            min-height: 300px;
+            width: auto;
+            background-color: rgb(160, 227, 160);
+            margin-top: 30px;
+            position: absolute;
+            left: auto;
+            bottom: auto;
+            top: 60px;
+            right:30px;
+            align-items: flex-start;
+
+        }
+        .UserMenu-nav-item-link {
+            &:link, &:visited {
+                color: white;
+            }
+        }
+    }
+
+
+
+}
